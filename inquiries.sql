@@ -50,9 +50,9 @@ VALUES('Carlos', '2021-01-20', 'contenido de un nuevo post', 'esto es un post', 
 -- creando una nueva tabla de comentarios
 CREATE TABLE comments(
   id_comment SERIAL,
-  date_creation TIMESTAMP,
-  content VARCHAR(50),
-  id_post INTEGER REFERENCES posts(id)
+  date_creation TIMESTAMP NOT NULL,
+  content VARCHAR(50) NOT NULL,
+  id_post INTEGER NOT NULL REFERENCES posts(id)
 );
 
 
